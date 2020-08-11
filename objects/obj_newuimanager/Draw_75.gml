@@ -1,7 +1,7 @@
-if(room == simroom)
+if(room == simroom) //Only draw the in-game UI if the current room is the simulation room.
 {
 
-#region Camera Updates
+#region Camera Updates - grabs variables pertaining to the camera
 camerax = camera_get_view_x(camera);
 cameray = camera_get_view_y(camera);
 
@@ -17,28 +17,18 @@ guiScale = 1 //900 / window_get_height();
 winW = window_get_width();
 winH = window_get_height();
 
+//Grab GUI mouse coordinates
 mousex = window_mouse_get_x();
 mousey = window_mouse_get_y();
 
+//default box tint
 var boxColor = c_white;
 
-//Left
+//Width of the left box
 leftBound = 300//((winW - winH) / 2);
 
-//Right
+//Width of the right box
 rightBound = (winW - leftBound);//(winW - leftBound);
-
-#endregion
-
-#region Camera Movement Lock
-if(mousex < leftBound or mousex > rightBound)
-{
-	obj_camera.movementAllowed = false;
-}
-else
-{
-	obj_camera.movementAllowed = true;
-}
 
 #endregion
 
