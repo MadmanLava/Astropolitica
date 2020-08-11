@@ -1,0 +1,1 @@
+global.startTime = current_time; // Grab the time at the start of the frame, for lag compensation uses

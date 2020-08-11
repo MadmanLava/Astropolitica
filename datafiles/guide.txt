@@ -1,0 +1,102 @@
+=IN-GAME CONTROLS=
+
+- Escape: Open the (currently inoperable) options menu.
+
+==GALAXY GENERATION MENU==
+
+- Most values: Drag the slider to change the value.
+
+- Small/precise values or settings: Use the +/- buttons to increment the value.
+
+- Toggleable parameters: Use the generic button to toggle the parameter.
+
+
+==CAMERA==
+
+Middle-click + Drag/Arrow Keys: Pan the camera.
+Scrollwheel: Zooms the camera in/out.
+F4: Toggle fullscreen. DO NOT DO THIS NOR RESCALE THE WINDOW DURING GENERATION, IT BREAKS THE GAME'S SCALING. I DON'T KNOW WHY.
+
+
+==TIME CONTROLS==
+
+The current in-universe date is displayed in the upper-right, with the DD/MM/YY format. Each year has 12 months, and each month has exactly 30 days. Simulation calculations are mapped to particular days of the month, especially in the last 10 days of a month, so one may experience lag during the last few days of a month.
+
+- Spacebar: Pause/Unpause the simulation.
+- Top-left Slider: Drag to alter the speed of the simulation. Displayed as 1 day per ## game ticks, with a day passing per number of game ticks(frames) shown. More ticks/day = slower passage of time.
+
+
+==INSPECTORS==
+
+- Scrollwheel: Scroll up/down.
+
+- Left Click on a System: Opens that system in the system inspector. Click again on empty space to unselect.
+
+- Right Click on an Owned System: Opens the country that owns the selected system in the country inspector. Only works on owned systems, for obvious reasons.
+
+===LEFT===
+
+- Tabs: Select a menu(only the galactic overview is currently functional)
+
+
+===RIGHT===
+
+- Q: Opens the interference menu. Editable values can be altered with the displayed controls.
+
+- Category Headers: Click to open/close a category. Some are closed by default.
+
+- Planet/System/Country Names: Click on a name to open it in the relevant inspector.
+
+
+==DEBUG==
+
+- Left Control: Toggles the UI. Useful for unobstructed screenshots.
+- Left Alt: Open the debug console. Most commands are very dated and simply crash the game, and the help command doesnt say anything. Also turns off many UI elements.
+- Tab: Close out of the simulation and return to the main menu. Currently NOT recommended if using a large galaxy, nor should it be used repeatedly, as it currently causes an unresolved minor memory leak that may cause bugs. It is recommended to simply restart the app instead.
+
+=GALAXY GENERATION=
+
+Galaxy generation is performed through the use of a number of parameters, which have been grouped by type. Click the category header to select a different group of options. Depending on the parameter, different options will be available to alter them. While most of the parameters are self-explanatory, there are a few less intuitively-named parameters. These less obvious parameters are detailed below:
+
+- The "seed" is the value used by the game's random number generation to create said random numbers, thusly the same seed should produce the same results.
+
+- "Generation Mode" refers to the approach the game uses to place and connect stars. In "Normal", each star attempts to place a number of child stars(See "Max Star Children"), which are automatically connected to it, and any unrelated star within a certain proximity is also connected. In "Tree", this latter step of connecting non-child stars is skipped, resulting in a radial branching pattern, hence the name.
+
+- "Maximum Star Children" refers to the number of additional "child" stars each star attempts to generate during the star placement process. Decreasing this makes the generation "stringier", whereas increasing it tends to fill gaps and increase the connectedness of the galaxy.
+
+- "Max. Failed Star Children" is similar, but represents a cap on the number of times a star can fail to place said child stars. Setting the latter too low can sometimes cause generation to fail.
+
+- The density options all refer to the placement and effect of "density nodes", which, depending on the Density Factor, will make stars more or less dense in their placement as they near it. Positive factor = more density and vice versa. There is an option to place a density node at the center of the galaxy and/or a number of additional ones within a chosen radius.
+
+
+=ECONOMY=
+
+Astropolitica uses a multilayered economic system, based around resources, value, and infrastructure. Planets(and to a lesser extent, Systems) are responsible for the direct extraction of resources. On planets, infrastructure for the extraction of basic raw resources is always present, and expedites the collection of said material. Manufactured resources instead require the construction of infrastructure to be created, and cost raw resources to function. Spaceborne infrastructure must likewise be constructed before systems can harvest raw resources in space.
+
+==RESOURCES==
+
+- Energy: A generalized representation of stored energy, with antimatter being the most common form of bulk storage.
+
+- Metal: A variety of common metals essential to the basic function and expansion of an interstellar civilization.
+
+- Rare Elements: Elements, compounds and other assorted rare substances critical to modern civilization.
+
+- Crystal: Crystalline substances with a variety of specialized uses.
+
+- Gas: Critical gases such as oxygen, hydrogen, and noble gases. Useful in a variety of applications from fusion reactors to life-support.
+
+- Radioactives: Radioactive materials have a wide variety of practical applications, from medicine to industry.
+
+- Food: Among the most basic of essentials for living beings. The demands of an interstellar population have seen a large shift from "natural" foods to significantly enhanced, thoroughly processed meals for superior cost, storability, and nutrition.
+
+- Consumer Goods: Miscellaneous goods, products and luxuries that facilitate ordinary life and increase the overall standards of living.
+
+- Alloys: Refined metals, polymers, ceramics and other high-grade materials required for the construction of spacecraft and military-grade ships/equipment.
+
+- Nanotech: The applications of inperceptibly small machinery are virtually limitless, though the technology is most common in sophisticated construction and industry.
+
+- Advanced Components: Advanced materials, computers, and other high-tech components. Most useful in complex constructions such as advanced infrastructure and high-tech spacecraft.
+
+- Neutronium: Incredibly dense and difficult to quarry, Neutronium is a type of degenerate matter largely or even entirely composed of neutrons. With density orders of magnitude higher than that of ordinary matter, Neutronium has specialized high-tech and military applications.
+
+- Erronogen: Likely the rarest naturally occurring substance in the universe, Erronogen is an incredibly rare and bizarre substance. Only found in a type of ultra-rare star composed entirely of the strange material, once harvested Erronogen has extremely potent applications for power generation and weaponry.
