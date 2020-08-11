@@ -1,3 +1,5 @@
+//if you're reading this, we should be done with source control nonsense
+
 if(room == simroom) //Only draw the in-game UI if the current room is the simulation room.
 {
 
