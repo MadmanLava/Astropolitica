@@ -4,6 +4,7 @@ ds_list_add(list,
 "[AD] Need to escape your existence as a meaningless statistic? Visit the Omaak Club today.",
 "[AD] Bored with your cushy life on an established planet? Sign up to colonize a hellish rock today.",
 "[AD] Aetherweb Industries presents the 800T model defense android, for all your security needs.",
+"[AD] O R B , only 30,000 credits at your local vendor",
 "[NEWS] Voronacirus labeled " + instance_find(obj_faction, irandom_range(0, instance_number(obj_faction)-1)).baseName + " hoax",
 "[NEWS] " + instance_find(obj_faction, irandom_range(0, instance_number(obj_faction)-1)).baseName + choose(" man ", " woman ") + 
 choose("dead after attempt to mine Neutronium with screwdriver", "attempts to fuel starship with narcotics", "arrested for bungee jumping off space elevator", "attempts to mine moon for cheese",
@@ -27,7 +28,11 @@ choose("dead after attempt to mine Neutronium with screwdriver", "attempts to fu
 "[NEWS] Plans to build new hyperlane delayed after planet discovered in the way",
 "[NEWS] Experimental temporal warship destroyed after colliding with its future self",
 "[NEWS] Ancient bunkers unearthed and opened, inhabitants disappointed by outside world's survival",
-"[NEWS] Local official continues to deny allegations of being a shapeshifter"
+"[NEWS] Local official continues to deny allegations of being a shapeshifter",
+"[NEWS] A dog exists somewhere. Its the feel-good story of the century!",
+"[NEWS] Scientists suspect fabric of the universe recently purged of strange, degenerate redundancy.",
+"[NEWS] Something has happened somewhere.",
+"[NEWS] Refitted former colony ship goes missing following skirmish on orbited planet."
 );
 
 var ans = scr_randFromList(list);
